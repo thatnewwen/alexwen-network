@@ -1192,9 +1192,10 @@ a:hover {
     margin-left: 0px !important;
     margin-right: 0px !important;
     height: auto !important;
+    padding: 0px;
   }
 
-  .writing-samples{
+  .abc-container .writing-samples{
     font-size: 30px;
     font-weight: 400;
   }
@@ -1225,5 +1226,60 @@ a:hover {
   .title {
     font-family: "Work Sans";
     text-transform: uppercase;
+  }
+
+  .top-section{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .top-section div{
+    padding-bottom: 5px;
+  }
+
+  .title-background{
+    padding: 30px;
+  }
+
+  .title-text{
+    font-size: 25px;
+  }
+
+  .intro-area > div{
+    padding: 15px;
+  }
+
+  .design-scroll{
+    padding: 25px;
+  }
+
+  .design-example img{
+    max-height: 300px;
+  }
+
+  .jpg-container img{
+    padding: 0px;
+  }
+
+  .png-container{
+    flex-direction: column;
+  }
+
+  .png-container h3{
+    transform: none;
+    position: relative;
+    left: inherit;
+    bottom: inherit;
+    float: unset;
+    margin-top: 100px;
+  }
+
+  .design-scroll{
+    margin-top: 0px;
+    padding: 25px;
+  }
+
+  .design-example img{
+    max-height: 300px;
   }
 }
