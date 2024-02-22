@@ -83,6 +83,7 @@ body {
 }
 
 .section{
+  position: relative;
   border-top: 3px solid;
   padding: 10px 0;
   margin-bottom: 100px;
@@ -116,6 +117,7 @@ h2{
 }
 
 .subsection{
+  position: relative;
   border-top: 1px dashed;
   margin: 50px 0;
   padding: 10px 0;
@@ -140,7 +142,12 @@ h2{
 
 .subdesc{
   padding-right: 20px;
-  max-width: 50%;
+  width: 100%;
+}
+
+.design .subdesc p{
+  position: absolute;
+    left: 130px;
 }
 
 .half .subdesc, .process .subdesc{
@@ -491,6 +498,64 @@ h2{
   float: left;
 }
 
+.thirds{
+  display: flex;
+}
+
+.third{
+  width: 33%;
+}
+
+.design .third img {
+    border: none;
+    width: -webkit-fill-available;
+    object-fit: contain;
+    padding-left: 60px;
+    padding-top: 50px;
+}
+
+.bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: #5108e3;
+  height: 125px;
+  width: 125px;
+  display: block;
+  z-index: -10;
+  margin-top: 10px;
+}
+
+.third img{
+  width: 100%;
+    margin-top: 15px;
+    border: 1px dotted;
+    padding: 0px;
+    padding-top: 10px;
+}
+
+.full img{
+  width: -webkit-fill-available;
+}
+
+.full .description {
+  padding-left: 20px;
+}
+
+.block{
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+  position: absolute;
+  height: -webkit-fill-available;
+  font-size: 12px;
+  bottom: 0;
+  color: whitesmoke;
+  background: #5108e3;
+  padding: 15px;
+  padding-bottom: 15px;
+  left: -50px;
+  top: -1px;
+}
+
 #circle {
   font-size: 12px;
   color: white;
@@ -781,7 +846,7 @@ h2{
 }
 
 .web-browser video {
-  max-width: 600px;
+  max-width: 98%;
   border: 10px solid;
 }
 
@@ -981,6 +1046,13 @@ a:hover {
   margin: 8px;
 }
 
+ul {
+  padding-left: 15px;
+    text-transform: uppercase;
+    font-size: 11px;
+    list-style-type: square;
+}
+
 .role {
   color: #ff7676;
   font-size: 16px;
@@ -1126,6 +1198,13 @@ a:hover {
   display: flex;
 }
 
+.www-container h3{
+  position: absolute;
+    font-size: 200px;
+    top: 0;
+    left: -75px;
+}
+
 .intro-area{
   display: flex;
   flex-direction: row;
@@ -1135,15 +1214,6 @@ a:hover {
   flex: 1;
   padding-right: 30px;
   font-size: 14px;
-}
-
-.www-container .sidebar{
-  flex: 1
-}
-
-.www-container .web-browser{
-  flex: 2;
-  border: 1px dashed;
 }
 
 .title-text {
@@ -1164,15 +1234,47 @@ a:hover {
   font-size: 11px;
 }
 
-@media (max-width: 500px) {
-  .half{
+@media (max-width: 700px) {
+  .thirds {
+    flex-direction: column;
+  }
+
+  .block{
+    transform: none;
+    writing-mode: revert;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+
+  .design .third img {
+    padding-left: 0;
+    padding-top: 75px;
+  }
+
+  .half, .third{
     width: 100%;
+    margin-bottom: 0px;
+  }
+
+  .subimg-container{
+    display: block;
+  }
+
+  .subimg {
+    display: inline;
   }
 
   .horizontal-mini{
-    width: 100%;
-    margin-right: 0px;
-    margin-bottom: 20px; 
+    width: 120px;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+
+  .www-container h3 {
+    position: relative;
+    font-size: 20px;
+    left: 0;
   }
 
   .www-container{
@@ -1185,6 +1287,7 @@ a:hover {
 
   .web-browser video{
     width: 100%;
+    border: 3px solid;
   }
 
   .jpg-container img{
@@ -1238,19 +1341,19 @@ a:hover {
   }
 
   .title-background{
-    padding: 30px;
+    padding: 15px;
   }
 
   .title-text{
     font-size: 25px;
   }
 
-  .intro-area > div{
-    padding: 15px;
-  }
-
   .design-scroll{
     padding: 25px;
+  }
+
+  .full .description{
+    padding-left: 0px;
   }
 
   .design-example img{
