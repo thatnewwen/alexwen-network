@@ -510,7 +510,7 @@ h2{
 
 .design .third img {
     border: none;
-    width: -webkit-fill-available;
+    width: 100%;
     object-fit: contain;
     padding-left: 60px;
     padding-top: 50px;
@@ -537,7 +537,7 @@ h2{
 }
 
 .full img{
-  width: -webkit-fill-available;
+  width: 100%;
 }
 
 .full .description {
@@ -548,7 +548,7 @@ h2{
   writing-mode: vertical-rl;
   transform: rotate(-180deg);
   position: absolute;
-  height: -webkit-fill-available;
+  height: 100%;
   font-size: 12px;
   bottom: 0;
   color: whitesmoke;
